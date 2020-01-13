@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Life record</title>
+</head>
+<body>
+{% for article in latest_article_list %}
+<div class='row'>
+	<h2><a id='article_title', href='/blog/{{article.id}}'>{{article.title}}</a></h2>
+	<p>{{ article.content|truncatechars_html:80 | safe }}</p>
+	<p>{{ article.pub_date | date:'j M' }}</p>
+</div>
+<hr>
+{% endfor %}
+</body>
+</html>

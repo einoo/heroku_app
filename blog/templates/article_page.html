@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- MathJax -->
+	<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+<title>Life record</title>
+</head>
+<body>
+<div class='row'>
+	<h2>{{article.title}}</h2>
+	<p>{{ content | safe }}</p>
+	<p>{{ article.pub_date | date:'j M Y' }}</p>
+</div>
+</body>
+</html>
